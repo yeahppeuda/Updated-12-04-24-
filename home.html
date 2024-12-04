@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth; /* Smooth scroll for the whole page */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html" class="active">Home</a>
+        <a href="#about-section">About</a>
+        <img src="Elb.png" alt="Icon" class="nav-icon">
+        <a href="Menu_Section/Menu.html">Menu</a>
+        <a href="Feedback.html">Feedback</a>
+    </nav>        
+
+    <div class="line"></div>
+
+    <div class="intro-section">
+        <h1>Éblouissante Cafe</h1>
+        <p>Every cup is a work of art, carefully crafted to deliver the <br> perfect blend of flavors. Each visit feels like a touch <br> of magic, turning every sip into a special moment to remember!</p>
+    </div>        
+
+    <div class="coffee-section">
+        <!-- Explore and Order Coffee Buttons -->
+        <div class="coffee-buttons">
+            <a href="#about-section" class="menu-btn">See details</a>
+        </div>
+
+        <!-- Coffee Cards -->
+        <div class="coffee-grid">
+            <div class="coffee-card">
+                <div class="coffee-image">
+                    <img src="BS1.png" alt="Mocha Frappuccino">
+                </div>
+            </div>
+            <div class="coffee-card">
+                <div class="coffee-image">
+                    <img src="BS2.png" alt="Classic Vanilla Latte">
+                </div>
+            </div>
+            <div class="coffee-card">
+                <div class="coffee-image">
+                    <img src="BS3.png" alt="Caramel Macchiato">
+                </div>
+            </div>
+            <div class="coffee-card">
+                <div class="coffee-image">
+                    <img src="BS4.png" alt="Caramel">
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <!-- Mobile View Coffee Button -->
+    <div class="coffee-buttons-for-phone">
+        <a href="Menu.html" class="menu-btn">Menu</a>
+    </div>
+    
+    <div class="about-container" id="about-section">
+        <div class="about-content">
+            <div class="about-section">
+                <h1>About Us</h1>
+                <div class="about">
+                    <p>Welcome to Èblouissante Coffee House, a cozy escape crafted to bring joy and connection into every visit. Here, we’re passionate about every cup, brewing quality coffee sourced from sustainable farms to create an unforgettable experience. Let our warm atmosphere and friendly vibes be your retreat from the city's bustle—find your favorite spot, unwind, and make yourself at home.<br><br> 
+                    Visit us on the 2nd Floor, 671 Quirino Highway Corner Sinforosa St., Novaliches, Quezon City. Open Monday to Saturday, 8:00 AM - 8:00 PM, we’re here to welcome you!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slides-container">
+        <!-- Text Section on the Left -->
+        <div class="text-section">
+        </div>
+    
+        <!-- Slider Section on the Right -->
+        <div class="slider">
+            <div class="slides">
+                <img src="pic1.jpg" alt="Slide 2">
+                <img src="pic2.jpg" alt="Slide 3">
+                <img src="pic3.jpg" alt="Slide 1">
+            </div>
+        </div>
+
+        <!-- Staff Section -->
+         <div class="staff">
+<div class="staff-container" id="staff-section">
+    <h1>MEET OUR STAFF</h1>
+    <div class="staff-grid">
+        <!-- Staff Member 1 -->
+        <div class="staff-card">
+            <img src="1.png" alt="Staff 1" class="staff-photo">
+            <h2></h2>
+            <p></p>
+            <p>With over 5 years of experience, Jane ensures every cup is brewed to perfection.</p>
+        </div>
+        <!-- Staff Member 2 -->
+        <div class="staff-card">
+            <img src="2.png" alt="Staff 2" class="staff-photo">
+            <h2></h2>
+            <p></p>
+            <p>John crafts delicious pastries to pair with your favorite coffee.</p>
+        </div>
+        <!-- Staff Member 3 -->
+        <div class="staff-card">
+            <img src="3.png" alt="Staff 3" class="staff-photo">
+            <h2></h2>
+            <p></p>
+            <p>Emily makes every visit memorable with her warm smile and care.</p>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer id="social-media-footer">
+        <div class="left-images">
+            <img src="fb.png" alt="Facebook" class="social-icon" style="width: 22px; height: 25px;">
+            <img src="ig.png" alt="Instagram" class="social-icon" style="width: 30px; height: 30px;">
+        </div>
+        <div class="right-image">
+            <img src="viber.png" alt="Viber" class="social-icon" style="width: 50px; height: 60px;">
+            <p>+63 953 789 5857</p>
+        </div>
+    </footer>
+
+    <script src="Gui.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelector(".slides");
+            const images = document.querySelectorAll(".slides img");
+            let currentIndex = 0;
+
+            // Dynamically set the width of the slides container to fit all images
+            slides.style.width = `${images.length * 100}%`; // Width for all images combined
+
+            // Function to move to the next image automatically
+            function moveToNextImage() {
+                if (currentIndex < images.length - 1) {
+                    currentIndex++; // Move to the next image
+                } else {
+                    currentIndex = 0; // Loop back to the first image
+                }
+                updateSliderPosition();
+            }
+
+            // Function to update slider position based on currentIndex
+            function updateSliderPosition() {
+                const sliderWidth = document.querySelector(".slider").offsetWidth; // Get slider width
+                slides.style.transform = `translateX(-${currentIndex * sliderWidth}px)`; // Move horizontally
+            }
+
+            // Auto-slide every 3 seconds
+            setInterval(moveToNextImage, 3000);
+
+            // Initialize slider position
+            updateSliderPosition();
+        });
+    </script>
+</body>
+</html>

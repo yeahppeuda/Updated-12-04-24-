@@ -1,0 +1,695 @@
+    /* Import Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Body */
+    body {
+        background-color: #fff1ee;
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+        font-family: 'Century Gothic', Arial, sans-serif; /* Default font */
+        width: 100%;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%; /* Ensure full width */
+        height: 100%; /* Ensure full height */
+    }
+
+    /* Navigation Bar */
+    nav {
+        text-align: center;
+        margin-top: -200px; /* Remove the negative margin */
+        margin-bottom: 0;
+        width: 100%;
+        position: fixed;
+        background-color: #c4a69f;
+        z-index: 1000;
+        height: 60px; /* Adjusted height to make it slimmer */
+        display: flex;
+        align-items: center; /* Center the links vertically */
+        justify-content: center; /* Center the links horizontally */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for a clean look */
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #333;
+        padding: 5px 100px;
+        margin: 0 -50px;
+        border-radius: 5px;
+        font-weight: bold;
+        display: inline-block;
+        font-size: 24px;
+        font-family: 'Times New Roman', Times, serif;
+        padding-top: 50px;
+        margin-bottom: 50px;
+    }
+
+
+    .nav-icon {
+        width: 100px;
+        height: auto;
+        margin: 0 10px;
+        vertical-align: middle;
+    }
+
+    /* Intro Section */
+    .intro-section {
+        width: 100%;
+        text-align: left;
+        margin-top: 200px;
+        padding: 0 20px;
+    }
+
+    .intro-section h1 {
+        font-size: 5.5em;
+        color: #333;
+        font-family: "Dancing Script", cursive; /* Changed to a cursive font */
+        margin-bottom: 20px;
+        margin-left: 50px;
+    }
+    
+
+    .intro-section p {
+        font-size: 1.2em;
+        line-height: 1.5;
+        color: #333;
+        margin-bottom: 30px;
+        font-family: Lateef, serif;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+
+    /* Coffee Section */
+    .coffee-section {
+        margin-top: 30px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .coffee-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: fr fr;
+        gap: 20px; /* Nagdagdag ng espasyo sa pagitan ng mga grid items */
+        width: 350px;
+        position: absolute;
+        margin-top: -150px;
+        right: 220px;
+        transform: translateY(-50%);
+        padding: 10px;
+    }    
+
+    .coffee-card {
+        background-color: rgba(131, 107, 107, 0.82); /* Corrected RGBA syntax */
+        border-radius: 15px;
+        width: 230px; /* Box width */
+        height: 230px; /* Box height */
+        position: relative;
+        overflow: hidden; /* Prevent image overflow */
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        transition: transform 0.3s, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .coffee-image img {
+        width: 100%; /* Match parent container width */
+        height: 100%; /* Match parent container height */
+        object-fit: cover; /* Scale image to cover the entire box */
+        object-position: center; /* Center the image within the box */
+        border-radius: 15px; /* Match card's rounded corners */
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    
+    .coffee-image img:hover {
+        transform: scale(1.1); /* Slight zoom-in effect */
+        filter: brightness(0.9); /* Dim the image slightly */
+    }    
+
+    /* Buttons */
+    .coffee-buttons {
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+        margin-bottom: 30px;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .coffee-buttons-for-phone{
+        display: none;
+    }
+
+    /* Menu Button */
+    .menu-btn {
+        display: inline-block;
+        font-size: 1em;
+        padding: 5px 15px;
+        background-color: #c4a69f;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        margin-top: -25px;
+        margin-left: 67px;
+    }
+
+    .menu-btn:hover {
+        background-color: #b59785;
+        transform: scale(1.05);
+    }
+
+
+
+/* Style the left-side images */
+.left-images {
+    display: flex;
+    gap: 5px; 
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+
+.right-image {
+    display: flex;
+    
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.about-container{
+    background-color: #c4a69f;
+    height: 85%;
+    margin-top: 175px;
+    display: flex;
+    
+}
+
+.about-content{
+    margin-top: -195px;
+    
+}
+
+.about-section{
+    margin-top: 250px;
+    background-color: #fff1ee;
+    width: 45%;
+    margin-left: 50%;
+    border-radius: 10px;
+    height: 400px;
+    text-align: center;
+}
+
+.about{
+    margin-top: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.about-section h1{
+    padding-top: 20px;
+    font-family: Verdana, sans-serif;
+}
+
+.about p{
+    font-family: Lateef, serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000000;
+    max-width: 100%;
+    margin-top: 0x; /* Space between paragraphs */
+    margin-bottom: 20px; /* Adds space below each paragraph */
+    display: block; /* Ensure the paragraphs are block elements */
+    text-align: justify;
+    margin-left: 20px;
+}
+
+
+ /* Container for About Us and Slider */
+ .slides-container {
+    display: flex; /* Keep text and slider beside each other */
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 100px; /* Adjust spacing between the sections */
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+
+/* Text Section */
+
+/* Slider Section */
+.slider {
+    flex: 1;
+    width: 60%; /* Adjust width to fit the layout */
+    height: 600px; /* Fixed height for the slider */
+    position: relative;
+    overflow: hidden; /* Hide images that are not in view */
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-top: -130px;
+}
+
+/* Adjust the slides container for horizontal sliding */
+.slides {
+    display: flex; /* Use flex for horizontal layout */
+    flex-direction: row; /* Align images horizontally */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+    height: 100%; /* Ensure it fills the slider's height */
+    width: 100%; /* Ensure container spans entire slider width */
+}
+
+/* Each image in the slider */
+.slides img {
+    width: 100%; /* Make images fill the container */
+    height: 100%; /* Ensure images take full height */
+    object-fit: cover; /* Adjust to fit images proportionally */
+}
+
+
+
+/* Container for About Us and Slider, keeping them side by side */
+.slides-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -355px; /* Adjust space between sections */
+    flex-wrap: wrap;
+    width: 42%;
+    margin-left: 60px;
+}
+
+/* Slider Section */
+.slider {
+    flex: 1;
+    width: 60%; /* Adjust width to fit the layout */
+    height: 400px; /* Fixed height for the slider */
+    position: relative;
+    overflow: hidden; /* Hide images that are not in view */
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Slides container */
+.slides {
+    display: flex; /* Use flex for horizontal layout */
+    flex-direction: row; /* Align images horizontally */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+    height: 100%; /* Ensure it fills the slider's height */
+}
+
+/* Each image in the slider */
+.slides img {
+    width: 100%; /* Each image should take up 100% of the container width */
+    height: 100%; /* Ensure images take full height */
+    object-fit: cover; /* Adjust images to fit container proportionally */
+}
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 40px;
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    height: 70vh;
+    padding: 0 200px;
+    text-align: justify;
+    margin-left: 400px;
+    width: 500px;
+}
+
+.content {
+    text-align: right; 
+    width: max-content;
+}
+
+.last-container{
+    margin-top: 125px;
+}
+
+.container h1 {
+    font-family: Ledger;
+    font-size: 64px;
+    padding-right: 170px; 
+}
+
+/* Paragraph styling */
+p {
+    font-family: Lateef;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000000; 
+    padding-right: 30px; 
+    max-width: 100%; 
+    margin-top: -25px;
+}
+
+/* Staff Section */
+.staff-container {
+    text-align: center;
+    background-color: #fff1ee; /* Match the overall theme */
+    padding: 40px 20px;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 0px;
+}
+
+.staff-container h1 {
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+    color: #333;
+}
+
+.staff-grid {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure the layout adjusts on smaller screens */
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.staff-card {
+    background: #c4a69f; /* Card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    flex: 0 1 250px; /* Set a fixed width for the cards */
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    margin-top: 70px;
+}
+
+.staff-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensure the photo fits well */
+    margin-bottom: 10px;
+}
+
+.staff-card h2 {
+    font-size: 20px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.staff-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+
+/* Footer */
+
+#social-media-footer {
+    background-color: #f1f1f1;  /* Light gray background for footer */
+    padding: 0 0;  /* Padding for top and bottom */
+    display: flex;
+    justify-content: space-between;  /* Space out the left and right sections */
+    align-items: center;  /* Vertically center the content */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);  /* Optional: add shadow to footer */
+    width: 100%;  /* Full width of the viewport */
+    margin-top: 120px;  /* Remove any default margin */
+    
+}
+
+
+#social-media-footer .left-images,
+#social-media-footer .right-image {
+    display: flex;
+    align-items: center;  /* Vertically center icons and text */
+}
+
+#social-media-footer .right-image img {
+    margin: 0 0px;  /* Add space between the icons */
+}
+
+#social-media-footer .left-images img{
+    margin: -10px 10px;
+    padding-top: -40px;
+}
+
+.right-image p{
+    padding-top: 25px;
+}
+#social-media-footer p {
+    font-size: 14px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.social-icon {
+    transition: transform 0.3s ease;  /* Add smooth hover transition */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);  /* Enlarge icon slightly on hover */
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Reduce padding for smaller screens */
+        height: auto; /* Allow content to expand naturally */
+        background-color: #fff1ee;
+        width: 100%;
+    }
+      
+      nav {
+        display: flex;
+        flex-direction: row; /* Keep items in a row */
+        align-items: row; /* Center the items vertically */
+        justify-content: center; /* Center items horizontally if you want */
+        gap: 115px; /* Space between the items */
+        margin-top: 20px; /* Adjust for some top spacing */
+        margin-bottom: 20px; /* Adjust bottom spacing */
+        width: 100%; /* Ensure the nav takes full width */
+        margin-left: -10px;
+        margin-top: -15px;
+      }
+
+      nav a {
+        padding: 10px 5px; /* Adjust padding for better clickability */
+        font-size: 14px; /* Adjust font size */
+        text-decoration: none; /* Remove underline */
+        color: #333; /* Text color */
+        border-radius: 5px; /* Optional rounded corners */
+        width: auto; /* Make the links adjust to the content */
+        text-align: center; /* Center text horizontally */
+        display: flex; /* Use flex to control content alignment */
+        margin-top: 5px;
+        justify-content: center; /* Center text horizontally */
+        padding-top: 50px;
+      }
+      
+      .nav-icon {
+        width: 50px; /* Smaller icons */
+        margin-right: -50px;
+        margin-left: -50px;
+      }
+      
+      .line {
+        margin: 5px auto; /* Adjust spacing for smaller screens */
+        margin-top: -20px;
+      }
+    /* Adjust the intro section */
+    .intro-section {
+        margin-top: 80px; /* Adjust for smaller screen sizes */
+        padding: 0 10px;
+        text-align: center; /* Center the text */
+    }
+
+    .intro-section h1 {
+        font-size: 3em; /* Smaller font size */
+        margin-left: 0; /* Remove left margin */
+        
+    }
+
+    .intro-section p {
+        font-size: 1em; /* Smaller font size */
+        margin-left: 20px;
+        margin-top: -10px;
+    }
+
+    /* Coffee Section */
+    .coffee-section {
+        margin-top: -20px;
+        text-align: center; /* Center the content */
+    }
+
+    .coffee-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns for the grid */
+        gap: 10px; /* Add space between the items */
+        width: 100%; /* Full width of the container */
+        margin-top: 0;
+        right: 0;
+        transform: none;
+    }
+
+    /* Coffee Card */
+    .coffee-card {
+        width: 100%; /* Make each card take full width of the grid cell */
+        height: auto; /* Let the height adjust to content */
+    }
+    
+    /* Optionally, adjust the image inside the card */
+    .coffee-image img {
+        width: 100%; /* Make the image fill the card */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .coffee-buttons{
+        display: none;;
+    }
+    /* Button adjustment */
+    .menu-btn {
+        display: none;
+        font-size: 1em; /* Smaller button font size */
+        padding: 5px 20px; /* Adjust button padding */
+        margin-left: 125px; /* Remove margin on left */
+    }
+
+    .coffee-buttons-for-phone{
+        margin-top: 400px;
+        font-size: 1.2em; /* Smaller button font size */
+        padding: 5px 20px; /* Adjust button padding */
+        margin-left: -20px; /* Remove margin on left */
+        display: block;
+    }
+
+        .about-container {
+            padding: 15px; /* Reduce padding for smaller screens */
+            text-align: center; /* Center-align the text */
+            height: 650px;
+            width: 100%;
+            margin-top: 125px;
+            border-radius: 10px;
+        }
+
+        .about-content{
+            padding-top: 190px;
+            height: 200px;
+        }
+
+        .about-section{
+            width: 100%;
+            margin-left: 0px;
+            margin-top: 100px;
+            height: 500px;
+        }
+
+        .about p {
+            text-align: justify;
+            padding-left: 30px;
+        }
+    
+        .about-container h1 {
+            font-size: 20px; /* Adjust heading size */
+            margin-bottom: 10px; /* Add space below the heading */
+        }
+    
+        .about-container p {
+            font-size: 14px; /* Reduce paragraph text size */
+            line-height: 1.5; /* Improve readability */
+        }
+    
+        .slides-container {
+            display: flex;
+            flex-direction: column; /* Stack the text and slider vertically */
+            align-items: center; /* Center-align the content */
+            gap: 15px; /* Add spacing between text and slider */
+            padding: 10px; /* Add some padding around the container */
+            margin-top: -650px;
+            width: 300px;
+            height: 100px;
+            margin-left: 20px;
+        }
+    
+        .slider {
+            width: 100%; /* Ensure the slider takes the full width of the screen */
+            overflow: hidden; /* Prevent content overflow */
+        }
+    
+        .slides img {
+            width: 100%; /* Scale images to fit the screen width */
+            height: auto; /* Maintain aspect ratio */
+        }
+    
+    /* Social Media Footer */
+    #social-media-footer {
+        flex-direction: column; /* Stack the footer content vertically */
+        padding: 20px; /* Add padding */
+        margin-top: 750px;
+
+    }
+
+    #social-media-footer .left-images{
+        margin-left: -250px;
+        margin-top: -5px;
+    }
+    #social-media-footer .right-image {
+        margin-bottom: 10px; /* Add space between the left and right images */
+        margin-left: -150px;
+    }
+
+    .social-icon {
+        width: 20px; /* Smaller icon size */
+        height: 20px;
+    }
+
+    /* About Paragraph */
+    .about p {
+        font-size: 16px; /* Smaller text size */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    /* Footer Adjustments */
+    #social-media-footer p {
+        font-size: 12px; /* Smaller font size for footer text */
+    }
+    
+    .staff-container {
+        display: none;
+        text-align: center;
+        background-color: #fff1ee; /* Match the overall theme */
+        padding: 40px 20px;
+        flex-direction: column;
+        margin-top: 100px;
+        margin-left: 0px;
+    }
+  /* Ensure the About Us and slider section are side by side and remain visible */
+}
